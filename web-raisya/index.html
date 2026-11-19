@@ -2,20 +2,141 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Praktikum VPS AWS - Raisya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD Praktikum VPS & Cloud - Raisya Alviani</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; background-color: #f4f4f9; }
-        .card { background: white; padding: 30px; border-radius: 8px; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
-        h1 { color: #333; }
-        p { color: #666; font-size: 18px; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            padding: 30px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #ff9800;
+            padding-bottom: 20px;
+        }
+        .header h1 {
+            color: #ff9800;
+            font-size: 26px;
+            margin-bottom: 10px;
+        }
+        .identity {
+            font-size: 16px;
+            color: #555;
+            font-weight: 600;
+        }
+        .instruction {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            border-top: 4px solid #2c3e50;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+        }
+        .card h3 {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        .answer-box {
+            background: #f9f9f9;
+            border: 1px dashed #b0bec5;
+            border-radius: 6px;
+            padding: 12px;
+            min-height: 80px;
+            font-size: 14px;
+            color: #333;
+            line-height: 1.4;
+        }
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="card">
-        <h1>Laporan Praktikum VPS AWS</h1>
-        <p><strong>Nama:</strong> Raisya</p>
-        <p><strong>Status Deployment:</strong> Berhasil (XAMPP & Git di Windows Server AWS)</p>
-        <p><strong>IP Publik Server:</strong> 3.80.171.212</p>
+
+    <div class="container">
+        <!-- Header & Identitas -->
+        <div class="header">
+            <h1>Fase 1: Pengenalan Konsep VPS & Cloud</h1>
+            <div class="identity">
+                Nama: Raisya Alviani &nbsp;|&nbsp; Kelas: XI RPL 1
+            </div>
+        </div>
+
+        <p class="instruction">
+            Jelaskan secara singkat pemahaman Anda mengenai perbedaan layanan berikut dengan mengisi kotak yang tersedia:
+        </p>
+
+        <!-- Grid Kotak Jawaban LKPD -->
+        <div class="grid-container">
+            
+            <!-- 1. Shared Hosting -->
+            <div class="card">
+                <h3>Shared Hosting</h3>
+                <div class="answer-box">
+                    Layanan hosting di mana satu server fisik digunakan bersama-sama oleh banyak pengguna. Sumber daya (CPU, RAM) dibagi rata, sehingga harganya terjangkau namun performa bisa saling memengaruhi.
+                </div>
+            </div>
+
+            <!-- 2. Dedicated Server -->
+            <div class="card">
+                <h3>Dedicated Server</h3>
+                <div class="answer-box">
+                    Jenis layanan penyewaan seluruh server fisik secara eksklusif untuk satu pengguna saja. Menawarkan performa maksimal, kontrol penuh, dan keamanan tingkat tinggi tanpa berbagi dengan pihak lain.
+                </div>
+            </div>
+
+            <!-- 3. Amazon Lightsail -->
+            <div class="card">
+                <h3>Amazon Lightsail</h3>
+                <div class="answer-box">
+                    Layanan *Virtual Private Server (VPS)* pemula dari AWS yang dirancang dengan harga terjangkau dan prediktif. Sangat mudah digunakan untuk deployment aplikasi sederhana, web server, atau blog.
+                </div>
+            </div>
+
+            <!-- 4. Amazon EC2 -->
+            <div class="card">
+                <h3>Amazon EC2 (Elastic Compute Cloud)</h3>
+                <div class="answer-box">
+                    Layanan cloud computing berskala besar dari AWS yang menyediakan kapasitas komputasi fleksibel di cloud. Memungkinkan pengguna mengontrol penuh sistem operasi dan konfigurasi jaringan sesuai kebutuhan aplikasi kompleks.
+                </div>
+            </div>
+
+        </div>
     </div>
+
 </body>
 </html>
